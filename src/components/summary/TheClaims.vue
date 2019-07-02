@@ -1,18 +1,20 @@
 <template>
   <div class="q-pa-md">
     <demo-card :heading="heading" class="text-grey" :btnType="'add'">
-      <q-list v-for="item in claimItems" :key="item.id">
-        <q-banner class="text-grey-10 bg-indigo-1 q-ml-md q-mr-md">
-          <span class="text-weight-bold">{{item.text}}</span>
-          <q-chip class="float-right" color="grey-14 text-white">{{item.amount}}</q-chip>
+      <q-scroll-area style="height: 480px;">
+        <q-list v-for="item in claimItems" :key="item.id">
+          <q-banner class="text-grey-10 bg-indigo-1 q-ml-md q-mr-md">
+            <span class="text-weight-bold">{{item.text}}</span>
+            <q-chip class="float-right" color="grey-14 text-white">{{item.amount}}</q-chip>
+            <br />
+            <span class="caption">Claim ID:</span>
+            {{item.id}}
+            <br />
+            {{ item.date }}
+          </q-banner>
           <br />
-          <span class="caption">Claim ID:</span>
-          {{item.id}}
-          <br />
-          {{ item.date }}
-        </q-banner>
-        <br />
-      </q-list>
+        </q-list>
+      </q-scroll-area>
     </demo-card>
   </div>
 </template>
@@ -44,6 +46,18 @@ export default {
           text: "Chest X-ray",
           date: "09/20/2018",
           amount: "$225"
+        },
+        {
+          id: 575,
+          text: "PCP visit",
+          date: "06/15/2018",
+          amount: "$95"
+        },
+        {
+          id: 765,
+          text: "Leg X-ray",
+          date: "06/16/2018",
+          amount: "$105"
         },
         {
           id: 575,

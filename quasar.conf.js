@@ -54,7 +54,10 @@ module.exports = function (ctx) {
         'QSeparator',
         'QBanner',
         'QChip',
-        'QPageSticky'
+        'QPageSticky',
+        'ScrollFire',
+        'Scroll',
+        'QScrollArea'
         
         
       ],
