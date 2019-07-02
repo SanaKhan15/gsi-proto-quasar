@@ -1,21 +1,18 @@
 <template>
   <div class="q-pa-md">
-    <!-- <iconcard :heading="heading">  -->
-    <app-demo-card :heading="heading" class="text-grey" :btnType="'list'">
+    <demo-card :heading="heading" class="text-grey" :btnType="'list'">
       <q-list v-for="item in items" :key="item.id">
         <q-item>
-          <!-- <q-item-section>{{ items.text }}</q-item-section> -->
-
           <q-item-section class="q-ml-lg q-mt-md">
             <q-item-label class="text-grey-7 text-subtitle1">{{ item.text }}</q-item-label>
           </q-item-section>
         </q-item>
-        <q-separator class="seperator-margin" inset/>
+        <q-separator class="seperator-margin" inset />
       </q-list>
-    </app-demo-card>
-    <!-- </iconcard> -->
+    </demo-card>
   </div>
 </template>
+
 <script>
 import DemoCard from "../customCard/DemoCard";
 export default {
@@ -36,12 +33,13 @@ export default {
   },
 
   components: {
-    appDemoCard: DemoCard
+    DemoCard
   }
 };
 </script>
+
 <style scoped>
-.seperator-margin{
+.seperator-margin {
   margin-left: 33px;
 }
 </style>

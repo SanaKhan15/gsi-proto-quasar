@@ -26,10 +26,7 @@
       </q-item>
 
       <q-item align="around">
-        <q-item-section>
-          <!-- <div class="text-indigo-8">Programs</div>
-          <div>Chronic Disease Self Management Prog (CDSMP)</div>-->
-        </q-item-section>
+        <q-item-section></q-item-section>
 
         <q-item-section class="item_margin">
           <div class="text-indigo-8">Payer Number</div>
@@ -49,6 +46,7 @@
     </q-card>
   </div>
 </template>
+
 <style scoped>
 .item_margin {
   margin-left: 60px;

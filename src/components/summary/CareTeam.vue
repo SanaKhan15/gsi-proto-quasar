@@ -1,7 +1,6 @@
 <template>
   <div class="q-pa-md">
-    <!-- <iconcard :heading="heading">  -->
-    <app-demo-card :heading="heading" class="text-grey" :btnType="'list'">
+    <demo-card :heading="heading" class="text-grey" :btnType="'list'">
       <p class="q-ml-lg">
         Care team assigned:
         <span class="text-h6 text-black">Care Team 1</span>
@@ -10,25 +9,21 @@
       <q-list v-for="item in careItems" :key="item.id">
         <q-item>
           <q-item-section avatar class="q-ml-lg">
-            <!-- <q-btn unelevated round color="green-9"> -->
             <q-avatar class="primary mr-2 mb-2" color="grey" text-color="black">{{item.initial}}</q-avatar>
-            <!-- </q-btn> -->
           </q-item-section>
-
-          <!-- <q-item-section>{{ items.text }}</q-item-section> -->
 
           <q-item-section class="q-ml-lg q-mt-md">
             <q-item-label class="text-black text-subtitle1">{{ item.text }}</q-item-label>
             <q-item-label class="q-mt-lg">{{item.title}}</q-item-label>
           </q-item-section>
         </q-item>
-        <q-separator inset="item-thumbnail"/>
+        <q-separator inset="item-thumbnail" />
       </q-list>
       <view-all-bar :count="careItems.length" :total="8"></view-all-bar>
-    </app-demo-card>
-    <!-- </iconcard> -->
+    </demo-card>
   </div>
 </template>
+
 <script>
 import DemoCard from "../customCard/DemoCard";
 import ViewAllBar from "../shared/ViewAllBar";
@@ -80,7 +75,7 @@ export default {
   },
 
   components: {
-    appDemoCard: DemoCard,
+    DemoCard,
     ViewAllBar
   }
 };

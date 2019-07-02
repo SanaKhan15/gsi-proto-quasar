@@ -1,7 +1,6 @@
 <template>
   <div class="q-pa-md">
-    <!-- <iconcard :heading="heading">  -->
-    <app-demo-card :heading="heading" class="text-grey" :btnType="'add'">
+    <demo-card :heading="heading" class="text-grey" :btnType="'add'">
       <q-card-section class="q-ml-lg q-mb-lg">
         <q-btn-toggle
           v-model="model"
@@ -22,8 +21,6 @@
             </q-btn>
           </q-item-section>
 
-          <!-- <q-item-section>{{ items.text }}</q-item-section> -->
-
           <q-item-section class="q-ml-lg">
             <q-item-label class="text-black text-subtitle1">{{ item.text }}</q-item-label>
             <q-item-label>{{item.date}}</q-item-label>
@@ -31,12 +28,12 @@
           </q-item-section>
         </q-item>
 
-        <q-separator inset="item-thumbnail"/>
+        <q-separator inset="item-thumbnail" />
       </q-list>
-    </app-demo-card>
-    <!-- </iconcard> -->
+    </demo-card>
   </div>
 </template>
+
 <script>
 import DemoCard from "../customCard/DemoCard";
 export default {
@@ -99,7 +96,7 @@ export default {
   },
 
   components: {
-    appDemoCard: DemoCard
+    DemoCard
   },
   computed: {
     items() {

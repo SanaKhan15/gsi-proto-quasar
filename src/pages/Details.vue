@@ -1,20 +1,4 @@
 <template>
-  <!-- <div class="bg-grey-3">
-    <patientGlance></patientGlance>
-    <div class="container">
-        <div class="row" >
-   <div  ><action></action></div> 
-   <div ><CareTeam></CareTeam></div>
-   <div ><Alerts></Alerts></div>
-      <div class="row" >
-      <div ><TheClaims></TheClaims></div> 
-   <div><ThePrograms></ThePrograms></div>
-   <div><TheGaps></TheGaps></div>
-   </div>
-   </div>
-   </div>
-  </div>-->
-
   <div>
     <div class="bg-grey-3 row">
       <div class="col">
@@ -46,6 +30,7 @@
     </div>
   </div>
 </template>
+
 <script>
 import patientGlance from "../components/patientGlance.vue";
 import Action from "../components/summary/TheAction.vue";
@@ -71,10 +56,10 @@ export default {
   }
 };
 </script>
+
 <style>
 .container {
   display: flex;
-  /* flex-direction: row; */
 }
 </style>
 

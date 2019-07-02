@@ -1,7 +1,6 @@
 <template>
   <div class="q-pa-md">
-    <!-- <iconcard :heading="heading">  -->
-    <app-demo-card :heading="heading" class="text-grey" :btnType="'add'">
+    <demo-card :heading="heading" class="text-grey" :btnType="'add'">
       <q-card-section class="q-ml-lg q-mb-lg">
         <q-btn-toggle
           v-model="model"
@@ -17,15 +16,10 @@
       <q-list v-for="item in items" :key="item.id">
         <q-item>
           <q-item-section avatar>
-            <!-- <q-btn unelevated round color="green-9"> -->
-            <!-- <q-icon :name="item.icon" color="white"></q-icon> -->
             <q-avatar class="q-ml-lg" :class="[item.iconClass]">
               <q-icon :name="item.icon"></q-icon>
-              <!-- </q-btn> -->
             </q-avatar>
           </q-item-section>
-
-          <!-- <q-item-section>{{ items.text }}</q-item-section> -->
 
           <q-item-section class="q-ml-lg">
             <q-item-label class="text-black text-subtitle1">{{ item.text }}</q-item-label>
@@ -33,14 +27,14 @@
             <q-item-label caption>{{item.title}}</q-item-label>
           </q-item-section>
         </q-item>
-        <q-separator inset="item-thumbnail"/>
+        <q-separator inset="item-thumbnail" />
       </q-list>
 
       <view-all-bar :count="alertItems.length" :total="25"></view-all-bar>
-    </app-demo-card>
-    <!-- </iconcard> -->
+    </demo-card>
   </div>
 </template>
+
 <script>
 import DemoCard from "../customCard/DemoCard";
 import ViewAllBar from "../shared/ViewAllBar";
@@ -109,7 +103,7 @@ export default {
     };
   },
   components: {
-    appDemoCard: DemoCard,
+    DemoCard,
     ViewAllBar
   },
   computed: {

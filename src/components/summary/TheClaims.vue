@@ -1,30 +1,25 @@
 <template>
   <div class="q-pa-md">
-    <!-- <iconcard :heading="heading">  -->
-    <app-demo-card :heading="heading" class="text-grey" :btnType="'add'">
-      <!-- <banner-light v-for="item in claimItems" :key="item.id"> -->
-
+    <demo-card :heading="heading" class="text-grey" :btnType="'add'">
       <q-list v-for="item in claimItems" :key="item.id">
         <q-banner class="text-grey-10 bg-indigo-1 q-ml-md q-mr-md">
           <span class="text-weight-bold">{{item.text}}</span>
           <q-chip class="float-right" color="grey-14 text-white">{{item.amount}}</q-chip>
-          <br>
+          <br />
           <span class="caption">Claim ID:</span>
           {{item.id}}
-          <br>
+          <br />
           {{ item.date }}
         </q-banner>
-        <br>
+        <br />
       </q-list>
-
-      <!-- </banner-light> -->
-    </app-demo-card>
-    <!-- </iconcard> -->
+    </demo-card>
   </div>
 </template>
+
 <script>
 import DemoCard from "../customCard/DemoCard";
-// import BannerLight from "../customCard/BannerLight"
+
 export default {
   name: "Action",
   data() {
@@ -62,19 +57,12 @@ export default {
           date: "06/16/2018",
           amount: "$105"
         }
-        //   {
-        //   id: 795,
-        //   text: "Leg X-ray",
-        //   date: "06/16/2018",
-        //   amount: "$105"
-        // }
       ]
     };
   },
 
   components: {
-    appDemoCard: DemoCard
-    // BannerLight
+    DemoCard
   }
 };
 </script>
